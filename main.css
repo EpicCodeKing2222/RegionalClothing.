@@ -1,0 +1,420 @@
+* {                                         /*Removes all margins and paddings to give more freedom, works on all pages (will override )*/
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;         
+}
+
+@font-face {                                        /*Imports fonts from fonts folder and gives it a family to then later be called upon*/
+    font-family: "Fancy";
+    src: url(fonts/BeauRivage-Regular.ttf);
+}
+
+@font-face {
+    font-family: "SimpleBold";
+    src: url(fonts/Roboto-Bold.ttf);
+}
+
+li, a {                                                 /*Header Nav bar + smoke animation*/
+    font-family: "Fancy";
+    font-weight: 600;
+    font-size: 25px;
+    color: #a9adb0;
+    text-decoration: none;
+    background-color: #141414;
+    
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5%;
+    background-color: #141414;
+    padding: 0;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.nav_links{
+    list-style: none;
+    background-color: #141414;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 10px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+    
+}
+
+.nav_links li a:hover {
+    color: white;
+}
+
+.logo{
+    border-radius: 50%;
+    margin-left: 1%;
+}
+
+.smoke img{
+    width: 25px;
+    animation: smoke 8s linear infinite;
+}
+
+.smoke{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: 85%;
+    pointer-events: none;
+    user-select: none;
+}
+
+@keyframes smoke{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    20%{
+        
+        opacity: 1;
+    }
+    60%{
+        
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+
+.smoke img:nth-child(1){
+    animation-duration:8s;
+} 
+.smoke img:nth-child(2){
+    animation-duration:7.9s;
+} 
+.smoke img:nth-child(3){
+    animation-duration:8s;
+} 
+.smoke img:nth-child(4){
+    animation-duration:7.9s;
+} 
+.smoke img:nth-child(5){
+    animation-duration:8s;
+} 
+.smoke img:nth-child(6){
+    animation-duration:7.9s;
+} 
+.smoke img:nth-child(7){
+    animation-duration:8s;
+} 
+.smoke img:nth-child(8){
+    animation-duration:7.9s;
+} 
+.smoke img:nth-child(9){
+    animation-duration:8s;
+}                           
+
+body{
+    background-color: #313639;    /*background of body for all pages*/
+}
+
+.MainHeader{                        /*Index page css*/
+    font-family: "SimpleBold";
+    font-weight: 400;
+    text-align: center;
+    margin-top: 2%;
+    color: #a9adb0;
+    text-decoration: underline;      /*MainHeader class will be used on all pages (header text)*/
+}
+
+.slideshowM{
+    width: 450px;
+    height: 300px;
+    overflow: hidden;
+}
+
+.Mid{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.nav{
+   position: absolute;
+   bottom: 20px;
+   left: 50%;
+   transform: translateX(-50%); 
+   display: flex;
+}
+
+.button{
+    width: 25px;
+    height: 25px;
+    border: 2px solid #141414;
+    margin: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+    background: #a9adb0;
+}
+
+.button:hover{
+    background: white ;
+}
+
+input[name="r"]{
+    position: absolute;
+    visibility: hidden;
+}
+
+.slides{
+    width: 500%;
+    height: 100%;
+    display: flex;
+}
+
+.slide{
+    width: 20%;
+    transition: 0.5s;
+}
+
+.slide img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10%;
+}
+
+#r1:checked ~ .s1{
+    margin-left: 0;
+}
+#r2:checked ~ .s1{
+    margin-left: -20%;
+}
+#r3:checked ~ .s1{
+    margin-left: -40%;
+}
+#r4:checked ~ .s1{
+    margin-left: -60%;
+}
+#r5:checked ~ .s1{
+    margin-left: -80%;
+}
+
+.slideCon{
+    text-align: center;
+    margin-top: 410px;
+    font-family: "SimpleBold";
+    font-size: 20px;
+}
+
+.Video1{
+    
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+    
+
+.Table1, .Table1I, .Table1D{        /*Products Page CSS*/
+    border: black 4px solid;
+    border-collapse: collapse;
+    align-items: center;
+    text-align: center;
+    padding: 5px;
+    max-width: 800px;
+}
+
+.Table1{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 30px;
+    
+}
+
+.Table1I{
+    font-family: "Fancy";
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    background-color: #141414;
+}
+
+.Table1D{
+    font-family: "SimpleBold";
+    font-size: 15px;
+    background-color: #a9adb0;
+}
+
+.circleT{
+    border-radius: 50%;
+}
+
+.Table1Price{
+    color: rgb(141, 23, 23);
+}
+
+.pdf{
+    margin-left: 50%;
+    background-color: #313639;
+    padding-bottom: 50px;
+}
+
+.pdf123{
+    border-radius: 50%;
+}
+
+section{                        /*Contacts page CSS*/
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.formT{
+    font-family: "Fancy";
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+}
+
+.cont{
+    width: 90%;
+    margin: 0 auto;
+    padding: 25px;
+    border: #141414 4px solid;
+    max-width: 400px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #a9adb0;
+}
+
+.formG{
+    width: 100%;
+    margin-top: 20px;
+    font-size: 20px;
+    font-family: "SimpleBold";
+}
+
+.formG input, textarea{
+    width: 100%;
+    padding: 5px;
+    font-size: 18px;
+    border: #a9adb0 solid 1px;
+    margin-top: 5px;
+    border-radius: 10px;
+}
+
+textarea{
+    resize: vertical;
+    min-height: 35px;
+}
+
+button[type="submit"]{
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    outline: none;
+    font-family: "Fancy";
+    font-size: 25px;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    background-color: #141414;
+    color: white;
+    border-radius: 10px;
+}
+
+button[type="submit"]:hover{
+    background-color: white;
+    transition: 0.4s ease;
+    color: #141414;
+}
+
+.ReviewsT, .ReviewsH, .ReviewsC{
+    border: solid 3px black;
+    border-collapse: collapse;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    
+}
+
+.ReviewsH{
+    font-family: "Fancy";
+    font-weight: 700;
+    font-size: 30px;
+    background-color: #141414;
+    color: white;
+}
+
+.ReviewsC{
+    font-size: 18px;
+    font-family: "SimpleBold";
+    background-color: #a9adb0;
+}
+
+.AboutUsCon{                        /*Start of About Us CSS*/
+    border: 3px solid black;
+    margin-top: 50px;
+    max-width: 500px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #a9adb0;
+}
+
+.AboutUsTxt,.AboutUsConHead{
+    padding: 15px;
+    text-align: center;
+}
+
+.AboutUsTxt{
+    font-family: "SimpleBold";
+}
+
+.AboutUsConHead{
+    font-family: "Fancy";
+}
+
+.imgs{
+    width: 200px;
+    height: 200px;
+    min-height: 100px;
+    min-width: 100px;
+    border-radius: 50%;
+}
+
+.MainCon{
+    width: 500px;
+}
+
+.subConIMG{
+    border: #141414 3px solid;
+    width: 220px;
+    height: 300px;
+    background-color: #a9adb0;
+}
+
+.textIMG{
+    font-family: "Fancy";
+    font-size: 25px;
+    font-weight: 600;
+}
+
+.MainCon,.subConIMG,.imgs{
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
